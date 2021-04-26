@@ -69,12 +69,12 @@ Para iniciar, precisamos fechar todo o projeto, e em seguida, abri-lo no termina
 *Obs: [Caso ainda não tenha, instale o cocoapods, que é o gerenciamento de depêndencias usado para instalar as pods](https://cocoapods.org/)
 #### No terminal
 1
-```shell
+```powershell
     pod init
 ```
 
 2
-```shell
+```powershell
     pod install
 ```
 
@@ -90,9 +90,14 @@ Abrindo o Podfile (Pods/Podfile), adicione a lib do alamorfire abaixo da linha !
 
 ```
 pod 'Alamofire', '~> 5.2'
-
 ```
-Pronto, ja podemos usar a lib de requisição http Alamorfire.
+Rode novamente o comando no terminal
+
+```powershell
+    pod install
+```
+
+E pronto, ja podemos usar a lib de requisição http Alamorfire.
 
 
 ## Utilizando o alamofire
