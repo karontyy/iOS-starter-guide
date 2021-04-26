@@ -7,7 +7,7 @@ Projeto simples demonstrando o inicio do desenvolvimento iOS
 - iOS
 - [Swift](https://www.apple.com/br/swift/)
 - [Alamofire](https://github.com/Alamofire/Alamofire)
-
+- [Cocoapods](https://cocoapods.org/)
 - [PokeApi](https://pokeapi.co/)
 
 ## TableView Stroryboard
@@ -62,3 +62,34 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     //
 }
 ```
+## Iniciando o cocoapods
+
+Para iniciar, precisamos fechar todo o projeto, e em seguida, abri-lo no terminal
+
+*Obs: [Caso ainda não tenha, instale o cocoapods, que é o gerenciamento de depêndencias usado para instalar as pods](https://cocoapods.org/)
+#### No terminal
+1
+```shell
+    pod init
+```
+
+2
+```shell
+    pod install
+```
+
+Para abrir o projeto, clique no arquivo 
+```
+✅ Pokedex.xcworkspace
+```
+ao invés do que seria o padrão 
+ ```
+ ❌ Pokedex.xcodeproj
+```
+Abrindo o Podfile (Pods/Podfilr), adicione a lib do alamorfire abaixo da linha !use_frameworks
+
+```
+pod 'Alamofire', '~> 5.2'
+
+```
+Pronto, ja podemos usar a lib de requisição http Alamorfire.
