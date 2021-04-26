@@ -86,7 +86,7 @@ ao invés do que seria o padrão
  ```
  ❌ Pokedex.xcodeproj
 ```
-Abrindo o Podfile (Pods/Podfilr), adicione a lib do alamorfire abaixo da linha !use_frameworks
+Abrindo o Podfile (Pods/Podfile), adicione a lib do alamorfire abaixo da linha !use_frameworks
 
 ```
 pod 'Alamofire', '~> 5.2'
@@ -118,5 +118,20 @@ AF.request(URL_BASE + "/pokemon")
 }
 ```
 
+Deve-se criar as classes modelo para conter as entidades que seram trabalhadas no projeto
+
+Result.swift
+```swift
+struct Result: Decodable {
+  let name: String
+  let url: String
+  
+  enum CodingKeys: String, CodingKey {
+    case name
+    case url
+  }
+}
+```
+[Aqui você pode ver a diferença e definição de decodable e Encodable](https://pt.stackoverflow.com/questions/404533/qual-%C3%A9-a-diferen%C3%A7a-entre-codable-e-decodable)
 
 👷🏾 Estamos em contrução, em breve teremos mais e mais partes em nosso humilde tutorial 
