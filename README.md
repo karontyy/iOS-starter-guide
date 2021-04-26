@@ -93,3 +93,30 @@ pod 'Alamofire', '~> 5.2'
 
 ```
 Pronto, ja podemos usar a lib de requisição http Alamorfire.
+
+
+## Utilizando o alamofire
+Primeiramente, devo importar o Alamofire na classe em que farei a chamada do mesmo
+```swift
+import Alamofire
+```
+
+Crio uma variável contendo a URL base da minha api 
+```swift
+var URL_BASE = "https://pokeapi.co/api/v2/"
+
+```
+
+Para realizar a requisição, que no exemplo a baixo é um get, deve-se usar AF.request, nesse caso irá retornar uma lista com os pokemons
+```swift
+
+AF.request(URL_BASE + "/pokemon")
+    .validate()
+    .responseDecodable(of: Pokemon.self) { (response) in
+  guard let pokemons = response.value else { return }
+        self.items = pokemons.results
+}
+```
+
+
+👷🏾 Estamos em contrução, em breve teremos mais e mais partes em nosso humilde tutorial 
