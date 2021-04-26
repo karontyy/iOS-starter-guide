@@ -53,8 +53,8 @@
 		83E014EC18D58A0BB8391C07 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17B43782C9ABE3CF4471E18 /* Pods_Pokedex_PokedexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex_PokedexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98A73CDCB31C549F4DD207B /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
-		BF8DF9A42637053E00C9D9E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF8DF9A62637079700C9D9E7 /* storyboard-init-table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "storyboard-init-table.png"; path = "../../../../../../Desktop/storyboard-init-table.png"; sourceTree = "<group>"; };
+		BF8DF9AB26370A4700C9D9E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BFC1B08226335511003CDFAF /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC1B08526335511003CDFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC1B08726335511003CDFAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 		BFC1B07926335511003CDFAF = {
 			isa = PBXGroup;
 			children = (
+				BF8DF9AB26370A4700C9D9E7 /* README.md */,
 				BFC1B08426335511003CDFAF /* Pokedex */,
 				BFC1B09E26335515003CDFAF /* PokedexTests */,
 				BFC1B0A926335515003CDFAF /* PokedexUITests */,
@@ -156,7 +157,6 @@
 				BFC1B0D0263360D9003CDFAF /* TableViewCell.swift */,
 				BFC1B0D1263360D9003CDFAF /* TableViewCell.xib */,
 				BFC1B0FB26339EEA003CDFAF /* DetailsViewController.swift */,
-				BF8DF9A42637053E00C9D9E7 /* README.md */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
