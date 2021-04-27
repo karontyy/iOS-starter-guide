@@ -16,8 +16,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var URL_BASE = "https://pokeapi.co/api/v2/"
     
     var items: [Result] = []
+    var img: [ImgType] = []
+
     var selectedItem: Result?
-    var urlClick: Any?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,28 +37,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             .responseDecodable(of: Pokemon.self) { (response) in
           guard let pokemons = response.value else { return }
                 self.items = pokemons.results
-                for i in self.items {
-                    self.fetchPokemonsDetail(i.url)
-                }
+//                for i in self.items {
+//                    self.fetchPokemonsDetail(i.url)
+//                }
                 
                 self.tableView.reloadData()
         }
     }
     
-    func fetchPokemonsDetail(_ urlDetail: String) {
-        AF.request(urlDetail)
-            .validate()
-            .responseDecodable(of: DetailPokemon.self) {(response) in
-                print(try! response.result.get().sprites.front_default)
-            }
-        }
+//    func fetchPokemonsDetail(_ urlDetail: String) {
+//        AF.request(urlDetail)
+//            .validate()
+//            .responseDecodable(of: DetailPokemon.self) {(response) in
+//                print(try! response.result.get().sprites.front_default)
+//            }
+//        }
 
-    
     //MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        print(indexPath.row)
+        let detailsViewController = storyboard?.instantiateViewController(identifier: "details") as! DetailsViewController
+        navigationController?.pushViewController(detailsViewController, animated: true)
     }
-
     
     //MARK: - DataSource
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -71,8 +72,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let item = items[indexPath.row]
-        cell.name?.text = item.name
-        cell.photo?.backgroundColor = .green
+        cell.name?.text = item.name.uppercased()
+        cell.photo?.load(urlString: "https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG.png")
         return cell
     }
 }
+
