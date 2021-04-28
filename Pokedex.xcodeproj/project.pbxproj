@@ -12,7 +12,12 @@
 		BF362A1C2638E5C8006104FA /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362A1B2638E5C8006104FA /* Details.swift */; };
 		BF362A262639D1F7006104FA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362A252639D1F6006104FA /* StartViewController.swift */; };
 		BF362A2B2639D943006104FA /* AlunosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362A2A2639D943006104FA /* AlunosViewController.swift */; };
+		BF362A3D2639EE0A006104FA /* AlunoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF362A3B2639EE0A006104FA /* AlunoTableViewCell.swift */; };
+		BF362A3E2639EE0A006104FA /* AlunoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF362A3C2639EE0A006104FA /* AlunoTableViewCell.xib */; };
 		BF8DF9C32637895B00C9D9E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DF9C22637895B00C9D9E7 /* Extensions.swift */; };
+		BFAB050A2639FDEE00015419 /* Alunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB05092639FDEE00015419 /* Alunos.swift */; };
+		BFAB050F2639FE1100015419 /* Aluno.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB050E2639FE1100015419 /* Aluno.swift */; };
+		BFAB0517263A021C00015419 /* CadastraAlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB0516263A021C00015419 /* CadastraAlunoViewController.swift */; };
 		BFC1B08626335511003CDFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08526335511003CDFAF /* AppDelegate.swift */; };
 		BFC1B08826335511003CDFAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08726335511003CDFAF /* SceneDelegate.swift */; };
 		BFC1B08A26335511003CDFAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08926335511003CDFAF /* ViewController.swift */; };
@@ -58,8 +63,13 @@
 		BF362A1B2638E5C8006104FA /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 		BF362A252639D1F6006104FA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BF362A2A2639D943006104FA /* AlunosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunosViewController.swift; sourceTree = "<group>"; };
+		BF362A3B2639EE0A006104FA /* AlunoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoTableViewCell.swift; sourceTree = "<group>"; };
+		BF362A3C2639EE0A006104FA /* AlunoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlunoTableViewCell.xib; sourceTree = "<group>"; };
 		BF8DF9AB26370A4700C9D9E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF8DF9C22637895B00C9D9E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BFAB05092639FDEE00015419 /* Alunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alunos.swift; sourceTree = "<group>"; };
+		BFAB050E2639FE1100015419 /* Aluno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aluno.swift; sourceTree = "<group>"; };
+		BFAB0516263A021C00015419 /* CadastraAlunoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastraAlunoViewController.swift; sourceTree = "<group>"; };
 		BFC1B08226335511003CDFAF /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC1B08526335511003CDFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC1B08726335511003CDFAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,10 +127,9 @@
 		BF362A202639CFB9006104FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BFC1B0FB26339EEA003CDFAF /* DetailsViewController.swift */,
-				BFC1B08926335511003CDFAF /* ViewController.swift */,
+				BF362A352639ED93006104FA /* Alunos */,
+				BF362A342639ED81006104FA /* Pokemon */,
 				BF362A252639D1F6006104FA /* StartViewController.swift */,
-				BF362A2A2639D943006104FA /* AlunosViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,10 +137,66 @@
 		BF362A212639CFDC006104FA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BFC1B0D1263360D9003CDFAF /* TableViewCell.xib */,
-				BFC1B0D0263360D9003CDFAF /* TableViewCell.swift */,
+				BF362A3A2639EDDF006104FA /* Aluno */,
+				BF362A302639ED66006104FA /* Pokemon */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BF362A302639ED66006104FA /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1B0D0263360D9003CDFAF /* TableViewCell.swift */,
+				BFC1B0D1263360D9003CDFAF /* TableViewCell.xib */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		BF362A342639ED81006104FA /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1B0FB26339EEA003CDFAF /* DetailsViewController.swift */,
+				BFC1B08926335511003CDFAF /* ViewController.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		BF362A352639ED93006104FA /* Alunos */ = {
+			isa = PBXGroup;
+			children = (
+				BF362A2A2639D943006104FA /* AlunosViewController.swift */,
+				BFAB0516263A021C00015419 /* CadastraAlunoViewController.swift */,
+			);
+			path = Alunos;
+			sourceTree = "<group>";
+		};
+		BF362A362639EDAA006104FA /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				BFC1B0D826336C9D003CDFAF /* Pokemon.swift */,
+				BFC1B0E026336D91003CDFAF /* Result.swift */,
+				BFC1B0F526339384003CDFAF /* ImgType.swift */,
+				BF362A1B2638E5C8006104FA /* Details.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		BF362A3A2639EDDF006104FA /* Aluno */ = {
+			isa = PBXGroup;
+			children = (
+				BF362A3B2639EE0A006104FA /* AlunoTableViewCell.swift */,
+				BF362A3C2639EE0A006104FA /* AlunoTableViewCell.xib */,
+			);
+			path = Aluno;
+			sourceTree = "<group>";
+		};
+		BFAB05082639FDDB00015419 /* Aluno */ = {
+			isa = PBXGroup;
+			children = (
+				BFAB05092639FDEE00015419 /* Alunos.swift */,
+				BFAB050E2639FE1100015419 /* Aluno.swift */,
+			);
+			path = Aluno;
 			sourceTree = "<group>";
 		};
 		BFC1B07926335511003CDFAF = {
@@ -196,10 +261,8 @@
 		BFC1B0D726336C42003CDFAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFC1B0D826336C9D003CDFAF /* Pokemon.swift */,
-				BFC1B0E026336D91003CDFAF /* Result.swift */,
-				BFC1B0F526339384003CDFAF /* ImgType.swift */,
-				BF362A1B2638E5C8006104FA /* Details.swift */,
+				BFAB05082639FDDB00015419 /* Aluno */,
+				BF362A362639EDAA006104FA /* Pokemon */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +401,7 @@
 				BFC1B09526335514003CDFAF /* LaunchScreen.storyboard in Resources */,
 				BFC1B0D3263360D9003CDFAF /* TableViewCell.xib in Resources */,
 				BFC1B09226335514003CDFAF /* Assets.xcassets in Resources */,
+				BF362A3E2639EE0A006104FA /* AlunoTableViewCell.xib in Resources */,
 				BFC1B08D26335511003CDFAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,9 +530,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAB050A2639FDEE00015419 /* Alunos.swift in Sources */,
+				BFAB0517263A021C00015419 /* CadastraAlunoViewController.swift in Sources */,
 				BFC1B0D2263360D9003CDFAF /* TableViewCell.swift in Sources */,
+				BF362A3D2639EE0A006104FA /* AlunoTableViewCell.swift in Sources */,
 				BFC1B09026335511003CDFAF /* Pokedex.xcdatamodeld in Sources */,
 				BFC1B08A26335511003CDFAF /* ViewController.swift in Sources */,
+				BFAB050F2639FE1100015419 /* Aluno.swift in Sources */,
 				BFC1B08626335511003CDFAF /* AppDelegate.swift in Sources */,
 				BFC1B0E126336D91003CDFAF /* Result.swift in Sources */,
 				BF362A262639D1F7006104FA /* StartViewController.swift in Sources */,
