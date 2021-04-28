@@ -16,17 +16,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var URL_BASE = "https://pokeapi.co/api/v2/"
     
     var items: [Result] = []
-    var img: [ImgType] = []
-
-    var selectedItem: Result?
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //nib da TableViewCell
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TableViewCell")
+        
+        //Para as funções da tableview
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Chamada das funções
         fetchPokemons()
     }
     
@@ -35,28 +37,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         AF.request(URL_BASE + "/pokemon")
             .validate()
             .responseDecodable(of: Pokemon.self) { (response) in
-          guard let pokemons = response.value else { return }
+                guard let pokemons = response.value else { return }
                 self.items = pokemons.results
-//                for i in self.items {
-//                    self.fetchPokemonsDetail(i.url)
-//                }
-                
                 self.tableView.reloadData()
         }
     }
     
-//    func fetchPokemonsDetail(_ urlDetail: String) {
-//        AF.request(urlDetail)
-//            .validate()
-//            .responseDecodable(of: DetailPokemon.self) {(response) in
-//                print(try! response.result.get().sprites.front_default)
-//            }
-//        }
-
     //MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         let detailsViewController = storyboard?.instantiateViewController(identifier: "details") as! DetailsViewController
+        detailsViewController.urlPassed = items[indexPath.row].url
         navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
