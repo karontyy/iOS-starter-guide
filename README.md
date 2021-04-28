@@ -144,4 +144,50 @@ struct Result: Decodable {
 Caso precise usar um endpoint onde o link seja http e não https você precisa realizar uma configuração no arquivo info.plist, conforme a imagem abaixo: 
 ![info.plist](imgs/infoplist_http_cleartexttrafic.png)
 
+
+## Criando uma TableViewCell personalizada
+
+1. Primeiramente, deve-se Criar a classe, marcando a opção de criar xib, que com isso ira criar a classe swift e o layout da celular
+
+![Criando cell](imgs/criacao_cell.png)
+
+2. Dentro do arquivo .xib pode-se manipular e criar o layout da celula como desejar
+
+![personalizando cell](imgs/cell_xib.png)
+
+3. Seguindo, deve-se adicionar um identificador para o layout xib criado
+
+![personalizando cell](imgs/nome_xib.png)
+
+4. Lembando de sempre fazer as ligações dos elementos do layout dentro da classe da tableviewcell.swift
+
+```swift
+    @IBOutlet var name: UILabel!
+    @IBOutlet var photo: UIImageView!
+```
+
+Agora, passamos a classe que tem a tableview que irá ustilizar a celula criada
+
+5.  devemos inicializar o nib/xib criado no viewDidLoad()
+ 
+ ```swift
+ override func viewDidLoad() {
+     super.viewDidLoad()
+     
+     //nib da TableViewCell
+     let nib = UINib(nibName: "nome-dado-no-passo-3", bundle: nil)
+     suaTableView.register(nib, forCellReuseIdentifier: "nome-dado-no-passo-3")
+ }
+```
+
+6. No cellForRowAt posso fazer o uso da mesma
+
+ ```swift
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "nome-dado-no-passo-3", for: indexPath) as! ClasseDeTableViewCell
+    
+     return cell
+ }
+```
+
 👷🏾 Estamos em contrução, em breve teremos mais e mais partes em nosso humilde tutorial 
