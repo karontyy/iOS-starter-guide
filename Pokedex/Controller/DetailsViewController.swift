@@ -42,9 +42,10 @@ class DetailsViewController: UIViewController {
                 guard let peso = self.pokemonSelected?.weight else { return }
                 guard let altura = self.pokemonSelected?.height else { return }
                 guard let poderBase = self.pokemonSelected?.baseExperience else { return }
+                guard let countAbilities = self.pokemonSelected?.abilities.count else { return }
+                
                 guard let habilityOne =  self.pokemonSelected?.abilities[0].ability else { return }
-                guard let habilityTwo =  self.pokemonSelected?.abilities[1].ability else { return }
-
+                
                 
                 self.imgPokemon.load(urlString: photo.frontDefault)
                 self.nome.text = self.pokemonSelected?.name
@@ -52,7 +53,13 @@ class DetailsViewController: UIViewController {
                 self.altura.text = String(altura) + " M"
                 self.power.text = String(poderBase)
                 self.primaryAb.text = habilityOne.name
-                self.secondaryAb.text = habilityTwo.name
+                
+                if(countAbilities >= 2){
+                    guard let habilityTwo =  self.pokemonSelected?.abilities[1].ability else { return }
+                    self.secondaryAb.text = habilityTwo.name
+                } else {
+                    self.secondaryAb.text = ""
+                }
             }
         }
 
