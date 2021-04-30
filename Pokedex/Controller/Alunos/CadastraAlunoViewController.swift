@@ -11,22 +11,41 @@ class CadastraAlunoViewController: UIViewController {
 
     var URL_BASE = "http://localhost:8080/api"
 
+    @IBOutlet weak var textFieldNome: UITextField!
+    @IBOutlet weak var textFieldEndereco: UITextField!
+    @IBOutlet weak var textFieldTelefone: UITextField!
+    @IBOutlet weak var textFieldSite: UITextField!
+    @IBOutlet weak var textFieldNota: UITextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+    }
+    
+    func montaDicionarioDeParametros() -> Dictionary<String, String> {
+        guard let nome = textFieldNome.text else { return [:] }
+        guard let endereco = textFieldEndereco.text else { return [:] }
+        guard let telefone = textFieldTelefone.text else { return [:] }
+        guard let site = textFieldSite.text else { return [:] }
+        guard let nota = textFieldNota.text else { return [:] }
         
-        let aluno:Dictionary<String, String> = [
+        let dicionario:Dictionary<String, String> = [
             "id" : String(describing: UUID()),
-            "nome" : "Jhon Doe",
-            "endereco" : "9 Avenue",
-            "telefone" : "9 9999 9999",
-            "site" : "facebook.com",
-            "nota" : "6"
+            "nome" : nome,
+            "endereco" : endereco,
+            "telefone" : telefone,
+            "site" : site,
+            "nota" : nota
         ]
         
-        AF.request(URL_BASE + "/aluno", method: .post, parameters: aluno, encoding: JSONEncoding.default)
-            .validate()
-            .responseJSON { (response) in
-                print(response)
-            }
+        return dicionario
     }
+    
+    @IBAction func buttonSalvar(_ sender: UIButton) {
+        let json = montaDicionarioDeParametros()
+        Repositorio().salvaAluno(aluno: json)
+        navigationController?.popViewController(animated: true)
+    }
+    
+   
 }

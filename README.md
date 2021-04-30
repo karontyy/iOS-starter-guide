@@ -140,7 +140,7 @@ struct Result: Decodable {
 [Aqui você pode ver a diferença e definição de decodable e Encodable](https://pt.stackoverflow.com/questions/404533/qual-%C3%A9-a-diferen%C3%A7a-entre-codable-e-decodable)
 
 
-### Problemas com Cleartexttrafic(Http)
+## Problemas com Cleartexttrafic(Http)
 Caso precise usar um endpoint onde o link seja http e não https você precisa realizar uma configuração no arquivo info.plist, conforme a imagem abaixo: 
 ![info.plist](imgs/infoplist_http_cleartexttrafic.png)
 

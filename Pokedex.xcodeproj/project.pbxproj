@@ -18,6 +18,8 @@
 		BFAB050A2639FDEE00015419 /* Alunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB05092639FDEE00015419 /* Alunos.swift */; };
 		BFAB050F2639FE1100015419 /* Aluno.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB050E2639FE1100015419 /* Aluno.swift */; };
 		BFAB0517263A021C00015419 /* CadastraAlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB0516263A021C00015419 /* CadastraAlunoViewController.swift */; };
+		BFAB0530263B838100015419 /* Repositorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB052F263B838100015419 /* Repositorio.swift */; };
+		BFAB0538263B83C000015419 /* AlunoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAB0537263B83C000015419 /* AlunoAPI.swift */; };
 		BFC1B08626335511003CDFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08526335511003CDFAF /* AppDelegate.swift */; };
 		BFC1B08826335511003CDFAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08726335511003CDFAF /* SceneDelegate.swift */; };
 		BFC1B08A26335511003CDFAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC1B08926335511003CDFAF /* ViewController.swift */; };
@@ -70,6 +72,8 @@
 		BFAB05092639FDEE00015419 /* Alunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alunos.swift; sourceTree = "<group>"; };
 		BFAB050E2639FE1100015419 /* Aluno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aluno.swift; sourceTree = "<group>"; };
 		BFAB0516263A021C00015419 /* CadastraAlunoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastraAlunoViewController.swift; sourceTree = "<group>"; };
+		BFAB052F263B838100015419 /* Repositorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorio.swift; sourceTree = "<group>"; };
+		BFAB0537263B83C000015419 /* AlunoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoAPI.swift; sourceTree = "<group>"; };
 		BFC1B08226335511003CDFAF /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC1B08526335511003CDFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC1B08726335511003CDFAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,15 @@
 			path = Aluno;
 			sourceTree = "<group>";
 		};
+		BFAB051E263B7F1000015419 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFAB052F263B838100015419 /* Repositorio.swift */,
+				BFAB0537263B83C000015419 /* AlunoAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		BFC1B07926335511003CDFAF = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +238,7 @@
 		BFC1B08426335511003CDFAF /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				BFAB051E263B7F1000015419 /* Network */,
 				BF362A212639CFDC006104FA /* Cell */,
 				BF362A202639CFB9006104FA /* Controller */,
 				BFC1B0D726336C42003CDFAF /* Model */,
@@ -534,6 +548,8 @@
 				BFAB0517263A021C00015419 /* CadastraAlunoViewController.swift in Sources */,
 				BFC1B0D2263360D9003CDFAF /* TableViewCell.swift in Sources */,
 				BF362A3D2639EE0A006104FA /* AlunoTableViewCell.swift in Sources */,
+				BFAB0530263B838100015419 /* Repositorio.swift in Sources */,
+				BFAB0538263B83C000015419 /* AlunoAPI.swift in Sources */,
 				BFC1B09026335511003CDFAF /* Pokedex.xcdatamodeld in Sources */,
 				BFC1B08A26335511003CDFAF /* ViewController.swift in Sources */,
 				BFAB050F2639FE1100015419 /* Aluno.swift in Sources */,
