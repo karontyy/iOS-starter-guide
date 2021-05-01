@@ -11,12 +11,20 @@ import Alamofire
 class AlunoAPI: NSObject {
     
     var URL_BASE = "http://localhost:8080/api"
-
     
     //MARK: - POST
     
     func salvaAlunosNoServidor(parametros:Dictionary<String, String>) {
         AF.request(URL_BASE + "/aluno", method: .post, parameters: parametros, encoding: JSONEncoding.default)
+            .validate()
+            .responseJSON { (response) in
+                print(response)
+            }
+    }
+    
+    //MARK: - DELETE
+    func excluiAlunodoServidor(alunoId:String) {
+        AF.request(URL_BASE + "/aluno/" + alunoId, method: .delete, encoding: JSONEncoding.default)
             .validate()
             .responseJSON { (response) in
                 print(response)

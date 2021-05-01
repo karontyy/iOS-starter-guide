@@ -19,7 +19,6 @@ class CadastraAlunoViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     func montaDicionarioDeParametros() -> Dictionary<String, String> {

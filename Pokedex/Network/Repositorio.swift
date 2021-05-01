@@ -11,4 +11,8 @@ class Repositorio: NSObject {
     func salvaAluno(aluno:Dictionary<String, String>) {
         AlunoAPI().salvaAlunosNoServidor(parametros: aluno)
     }
+    
+    func excluiAluno(alunoId:String) {
+        AlunoAPI().excluiAlunodoServidor(alunoId: alunoId)
+    }
 }

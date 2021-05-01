@@ -49,6 +49,10 @@ class AlunosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    func deleleteAluno(alunoId: String){
+        Repositorio().excluiAluno(alunoId: alunoId)
+    }
+    
     @objc func clickBtnNovo(){
         let cadastraAlunoViewController = storyboard?.instantiateViewController(identifier: "novoAluno") as! CadastraAlunoViewController
         navigationController?.pushViewController(cadastraAlunoViewController, animated: true)
@@ -56,7 +60,8 @@ class AlunosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let id = items[indexPath.row].id
+        deleleteAluno(alunoId: id)
     }
     
     //MARK: - DataSource
